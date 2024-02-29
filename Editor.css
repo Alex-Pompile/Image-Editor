@@ -1,0 +1,173 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  background-image: url(dddepth-002.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  width: 90%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.editor-container,
+.preview-container {
+  display: block;
+  position: relative;
+  width: 100%;
+  background-color: #22577a41; 
+  padding: 2em 1em;
+  box-shadow: inset 1px 1px 18px 10px rgba(0, 0, 0, 0.76);
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+
+
+.editor-container {
+  margin: 0 0.6em 0 0;
+}
+
+.preview-container {
+  display: grid;
+  place-items: center;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+label {
+  display: block;
+  background-color: #38a3a5; /* Updated color */
+  color: #ffffff;
+  width: 12em;
+  font-size: 1.1em;
+  text-align: center;
+  padding: 1em 0;
+  border-radius: 0.3em;
+  margin: auto;
+  cursor: pointer;
+  box-shadow: inset 1px 1px 20px 10px black;
+}
+
+label:hover {
+  background-color: rgba(0, 255, 255, 0.816);
+  transition: 0.3s;
+}
+label:active{
+  top: 3px;
+  position: relative;
+}
+
+.image-container {
+  margin-bottom: 1em;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+a {
+  border: none;
+  outline: none;
+  place-items: center;
+  cursor: pointer;
+}
+
+.options-btn {
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.options-btn button {
+  background-color: #57cc99;
+  color: #82ff9f; 
+  border-radius: 0.3em;
+  font-size: 0.8em;
+  height: 3.2em;
+  width: 3.2em;
+}
+
+.options-btn button img {
+  width: 1.1em;
+}
+
+.action-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 1em;
+}
+
+#preview,
+#download {
+  background-color: #c7f9cc; /* Updated color */
+  font-size: 1em;
+  padding: 0.8em 1em;
+  color: #ffffff;
+  border-radius: 0.3em;
+  text-decoration: none;
+  box-shadow:inset 1px 1px 15px 5px black;
+  cursor: pointer;
+}
+
+#preview:hover{
+  background-color: #00548b;
+  transition: 0.2s;
+}
+
+#preview:active{
+  top: 3px;
+  position: relative;
+}
+
+
+#download:hover{
+background-color:#005187;
+transition: 0.2s;
+}
+
+#download:active{
+  top: 3px;
+  position: relative;
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .wrapper {
+      flex-direction: column;
+      position: absolute;
+      transform: translateX(-50%);
+      left: 50%;
+      top: 1em;
+  }
+
+  img {
+      display: block;
+      width: 60%;
+      margin: 0 auto;
+  }
+
+  .editor-container {
+      margin: 0 0 0.6em 0;
+  }
+}
